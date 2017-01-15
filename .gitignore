@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #built application files
 *.apk
 *.ap_
@@ -34,3 +35,17 @@ build/
 
 #NDK
 obj/
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> b4331f3f931ab4f0e84f189a0528077f5d483f33
