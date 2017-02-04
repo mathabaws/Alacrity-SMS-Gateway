@@ -25,7 +25,7 @@ public class CommonRecycleAdapter extends RecyclerView.Adapter<CommonRecycleAdap
         this.itemsData = itemsData;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.text) TextView textView;
 
         public ViewHolder (View itemLayoutView){
@@ -36,7 +36,8 @@ public class CommonRecycleAdapter extends RecyclerView.Adapter<CommonRecycleAdap
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_vew_common_items, null);
+        View itemLayoutView = LayoutInflater
+                .from(parent.getContext()).inflate(R.layout.recycle_vew_common_items, null);
         ViewHolder vh = new ViewHolder(itemLayoutView);
 
         return vh;

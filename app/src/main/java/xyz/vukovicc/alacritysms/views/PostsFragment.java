@@ -17,7 +17,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import xyz.vukovicc.alacritysms.R;
+import xyz.vukovicc.alacritysms.data.MockUserDataProvider;
+import xyz.vukovicc.alacritysms.data.UserDataProvider;
 import xyz.vukovicc.alacritysms.views.adapters.CommonRecycleAdapter;
+import xyz.vukovicc.alacritysms.views.adapters.TriggerListAdapter;
 
 
 public class PostsFragment extends Fragment {
@@ -43,8 +46,12 @@ public class PostsFragment extends Fragment {
     void setUPList(){
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        CommonRecycleAdapter adapter = new CommonRecycleAdapter(createItemList());
+/*        CommonRecycleAdapter adapter = new CommonRecycleAdapter(createItemList());
         recyclerView.setAdapter(adapter);
+*/
+        UserDataProvider udp = new MockUserDataProvider();
+        TriggerListAdapter triggerListAdapter = new TriggerListAdapter(udp.getTriggers());
+        recyclerView.setAdapter(triggerListAdapter);
     }
 
     private List<String> createItemList() {
