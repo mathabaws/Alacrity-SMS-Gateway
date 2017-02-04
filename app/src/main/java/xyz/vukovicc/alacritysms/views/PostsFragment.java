@@ -42,6 +42,7 @@ public class PostsFragment extends Fragment {
 
     void setUPList(){
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         CommonRecycleAdapter adapter = new CommonRecycleAdapter(createItemList());
         recyclerView.setAdapter(adapter);
     }
@@ -53,5 +54,7 @@ public class PostsFragment extends Fragment {
         }
         return itemList;
     }
+
+
 
 }
