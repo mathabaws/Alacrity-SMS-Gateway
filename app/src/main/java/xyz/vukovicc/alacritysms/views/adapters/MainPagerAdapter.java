@@ -1,9 +1,11 @@
 package xyz.vukovicc.alacritysms.views.adapters;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import xyz.vukovicc.alacritysms.views.ActivityLogFragment;
 import xyz.vukovicc.alacritysms.views.PostsFragment;
 
 /**
@@ -36,7 +38,8 @@ public class MainPagerAdapter  extends FragmentStatePagerAdapter {
         }
         else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
         {
-            PostsFragment tab2 = new PostsFragment();
+            //PostsFragment tab2 = new PostsFragment();
+            ActivityLogFragment tab2 = new ActivityLogFragment();
             return tab2;
         }
 
